@@ -1,0 +1,36 @@
+{
+    "slug": "connect4",
+    "name": "Connect Four",
+    "creator": "System",
+    "description": "Drop discs into the grid. Connect four in a row to win!",
+    "version": "1.0.0",
+    "game_type": "grid_strategy",
+    "mode": "turn_based",
+    "min_players": 2,
+    "max_players": 2,
+    "board": {
+        "rows": 6,
+        "cols": 7
+    },
+    "rewards": {
+        "entry_fee": 0,
+        "win_reward": 2
+    },
+    "board_rows": 6,
+    "board_cols": 7,
+    "turn_based": true,
+    "single_message_only": true,
+    "win_condition": "4 in a row (horizontal, vertical, diagonal)",
+    "reward_sar": 2,
+    "entry_fee_sar": 0,
+    "allowed_chat_types": ["group", "private"],
+    "required_files": ["logic.py"],
+    "ui_template": {
+        "header_enabled": true,
+        "player_hud_enabled": true,
+        "board_enabled": true,
+        "status_enabled": true,
+        "footer_enabled": true
+    },
+    "hud_fields": ["name", "badge", "wins", "role", "turn"]
+}

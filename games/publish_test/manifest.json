@@ -1,0 +1,117 @@
+{
+    "slug": "publish_test",
+    "name": "Publish Test",
+    "creator": "TestMaster",
+    "description": "A publishable game",
+    "version": "1.0.0",
+    "game_type": "button_logic",
+    "mode": "turn_based",
+    "min_players": 2,
+    "max_players": 4,
+    "board": {
+        "rows": 3,
+        "cols": 3
+    },
+    "rewards": {
+        "entry_fee": 0.0,
+        "win_reward": 0.0
+    },
+    "board_rows": 3,
+    "board_cols": 3,
+    "turn_based": true,
+    "single_message_only": true,
+    "win_condition": "",
+    "reward_sar": 0.0,
+    "entry_fee_sar": 0.0,
+    "allowed_chat_types": [
+        "group",
+        "private"
+    ],
+    "required_files": [
+        "logic.py"
+    ],
+    "ui_template": {
+        "header_enabled": true,
+        "player_hud_enabled": true,
+        "board_enabled": false,
+        "status_enabled": true,
+        "footer_enabled": true
+    },
+    "hud_fields": [
+        "name",
+        "badge",
+        "score",
+        "role",
+        "turn"
+    ],
+    "buttons": [
+        {
+            "id": "btn_1",
+            "label": "Score",
+            "emoji": "",
+            "action_id": "action_1",
+            "effect_type": "SCORE",
+            "visibility_rule": "always",
+            "condition": null,
+            "target": null,
+            "cooldown": 0
+        }
+    ],
+    "builder_generated": true,
+    "builder_config": {
+        "game_name": "Publish Test",
+        "description": "A publishable game",
+        "creator_name": "TestMaster",
+        "visibility": "public",
+        "tags": [],
+        "summary": "",
+        "game_type": "button_logic",
+        "min_players": 2,
+        "max_players": 4,
+        "join_rules": "open",
+        "entry_fee": 0,
+        "spectator_mode": false,
+        "private_room_support": false,
+        "buttons": [
+            {
+                "id": "btn_1",
+                "label": "Score",
+                "emoji": "",
+                "action_id": "action_1",
+                "effect_type": "SCORE",
+                "visibility_rule": "always",
+                "condition": null,
+                "target": null,
+                "cooldown": 0
+            }
+        ],
+        "board": {
+            "enabled": true,
+            "rows": 3,
+            "cols": 3,
+            "density": "normal",
+            "cells": [],
+            "hidden_cells": [],
+            "trap_cells": [],
+            "reward_cells": [],
+            "blocked_cells": [],
+            "teleport_cells": [],
+            "reveal_cells": []
+        },
+        "win_logic": {
+            "type": "target_score",
+            "target_score": 10,
+            "elimination_rules": "",
+            "path_completion_rules": "",
+            "custom_rules": ""
+        },
+        "economy": {
+            "reward_per_win": 2,
+            "entry_fee": 0,
+            "participation_reward": 0,
+            "bonus_reward": 0,
+            "anti_abuse": true,
+            "free_access": true
+        }
+    }
+}

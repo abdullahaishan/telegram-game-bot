@@ -1,0 +1,117 @@
+{
+    "slug": "battle_grid",
+    "name": "Battle Grid",
+    "creator": "GameMaster",
+    "description": "Strategic battle game on a grid",
+    "version": "1.0.0",
+    "game_type": "grid_strategy",
+    "mode": "turn_based",
+    "min_players": 2,
+    "max_players": 4,
+    "board": {
+        "rows": 3,
+        "cols": 3
+    },
+    "rewards": {
+        "entry_fee": 0.0,
+        "win_reward": 0.0
+    },
+    "board_rows": 3,
+    "board_cols": 3,
+    "turn_based": true,
+    "single_message_only": true,
+    "win_condition": "",
+    "reward_sar": 0.0,
+    "entry_fee_sar": 0.0,
+    "allowed_chat_types": [
+        "group",
+        "private"
+    ],
+    "required_files": [
+        "logic.py"
+    ],
+    "ui_template": {
+        "header_enabled": true,
+        "player_hud_enabled": true,
+        "board_enabled": true,
+        "status_enabled": true,
+        "footer_enabled": true
+    },
+    "hud_fields": [
+        "name",
+        "badge",
+        "score",
+        "role",
+        "turn"
+    ],
+    "buttons": [
+        {
+            "id": "btn_1",
+            "label": "Attack",
+            "emoji": "",
+            "action_id": "action_1",
+            "effect_type": "ATTACK",
+            "visibility_rule": "always",
+            "condition": null,
+            "target": null,
+            "cooldown": 0
+        }
+    ],
+    "builder_generated": true,
+    "builder_config": {
+        "game_name": "Battle Grid",
+        "description": "Strategic battle game on a grid",
+        "creator_name": "GameMaster",
+        "visibility": "public",
+        "tags": [],
+        "summary": "",
+        "game_type": "grid_strategy",
+        "min_players": 2,
+        "max_players": 4,
+        "join_rules": "open",
+        "entry_fee": 0,
+        "spectator_mode": false,
+        "private_room_support": false,
+        "buttons": [
+            {
+                "id": "btn_1",
+                "label": "Attack",
+                "emoji": "",
+                "action_id": "action_1",
+                "effect_type": "ATTACK",
+                "visibility_rule": "always",
+                "condition": null,
+                "target": null,
+                "cooldown": 0
+            }
+        ],
+        "board": {
+            "enabled": true,
+            "rows": 3,
+            "cols": 3,
+            "density": "normal",
+            "cells": [],
+            "hidden_cells": [],
+            "trap_cells": [],
+            "reward_cells": [],
+            "blocked_cells": [],
+            "teleport_cells": [],
+            "reveal_cells": []
+        },
+        "win_logic": {
+            "type": "target_score",
+            "target_score": 10,
+            "elimination_rules": "",
+            "path_completion_rules": "",
+            "custom_rules": ""
+        },
+        "economy": {
+            "reward_per_win": 2,
+            "entry_fee": 0,
+            "participation_reward": 0,
+            "bonus_reward": 0,
+            "anti_abuse": true,
+            "free_access": true
+        }
+    }
+}

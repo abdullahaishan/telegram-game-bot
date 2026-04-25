@@ -1,0 +1,34 @@
+# ──────────────────────────────────────────────────────────────
+# Render Blueprint – Telegram Multiplayer Game Platform
+# ──────────────────────────────────────────────────────────────
+# Deploy with:
+#   1. Push this repo to GitHub/GitLab
+#   2. In Render Dashboard → New → Blueprint
+#   3. Select this repo
+#   4. Set environment variables (secrets)
+#   5. Render creates the service automatically
+# ──────────────────────────────────────────────────────────────
+
+services:
+  - type: worker
+    name: game-platform
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: GAME_BOT_TOKEN
+        sync: false        # Set manually in Render Dashboard (secret)
+      - key: ADMIN_BOT_TOKEN
+        sync: false        # Set manually in Render Dashboard (secret)
+      - key: ADMIN_IDS
+        sync: false        # Set manually in Render Dashboard
+      - key: PORT
+        value: "10000"
+      - key: HEALTH_CHECK_PATH
+        value: "/health"
+    # Render worker health check
+    plan: starter          # Free tier: 750 hrs/month, then $7/mo
+    # For 24/7 operation without spinning down, use "starter" or above
+    # Free tier spins down after 15 min inactivity — NOT suitable for bots

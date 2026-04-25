@@ -1,0 +1,36 @@
+{
+    "slug": "memory",
+    "name": "Memory Match",
+    "creator": "System",
+    "description": "Flip cards to find matching pairs! The player with the most pairs wins.",
+    "version": "1.0.0",
+    "game_type": "score_attack",
+    "mode": "turn_based",
+    "min_players": 2,
+    "max_players": 4,
+    "board": {
+        "rows": 4,
+        "cols": 4
+    },
+    "rewards": {
+        "entry_fee": 0,
+        "win_reward": 2
+    },
+    "board_rows": 4,
+    "board_cols": 4,
+    "turn_based": true,
+    "single_message_only": true,
+    "win_condition": "Most pairs when all cards are matched",
+    "reward_sar": 2,
+    "entry_fee_sar": 0,
+    "allowed_chat_types": ["group", "private"],
+    "required_files": ["logic.py"],
+    "ui_template": {
+        "header_enabled": true,
+        "player_hud_enabled": true,
+        "board_enabled": true,
+        "status_enabled": true,
+        "footer_enabled": true
+    },
+    "hud_fields": ["name", "badge", "score", "role", "turn"]
+}

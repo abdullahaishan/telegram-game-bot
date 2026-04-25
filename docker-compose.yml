@@ -1,0 +1,31 @@
+# ──────────────────────────────────────────────────────────────
+# Docker Compose – Local Development & Testing
+# ──────────────────────────────────────────────────────────────
+# Usage:
+#   cp .env.example .env   # then fill in real tokens
+#   docker compose up -d
+#   docker compose logs -f
+# ──────────────────────────────────────────────────────────────
+
+version: "3.9"
+
+services:
+  game-platform:
+    build: .
+    container_name: game-platform
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "10000:10000"        # Health-check endpoint
+    volumes:
+      - game-data:/app/data  # Persist SQLite database
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:10000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  game-data:

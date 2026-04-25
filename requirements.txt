@@ -1,0 +1,9 @@
+# ── Core Bot Framework ──────────────────────────────────────
+python-telegram-bot==21.3
+
+# ── Environment Variable Loading ────────────────────────────
+python-dotenv==1.0.1
+
+# ── HTTP Client (used by python-telegram-bot internally) ────
+# Already a dependency of python-telegram-bot but explicit for clarity
+httpx>=0.25.0
